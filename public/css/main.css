@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+header {
+  padding: 24px 32px 16px;
+  border-bottom: 1px solid #2d2d4e;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #c8b8a2;
+  letter-spacing: 0.04em;
+}
+
+header p.subtitle {
+  font-size: 0.85rem;
+  color: #7a7a9a;
+  margin-top: 4px;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 32px;
+  background: #16162a;
+  border-bottom: 1px solid #2d2d4e;
+  flex-wrap: wrap;
+}
+
+#controls label {
+  font-size: 0.8rem;
+  color: #7a7a9a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+#category-filter {
+  background: #2d2d4e;
+  color: #e0e0e0;
+  border: 1px solid #3d3d5e;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+#category-filter:focus {
+  outline: none;
+  border-color: #c8b8a2;
+}
+
+#chart-container {
+  overflow-x: auto;
+  padding: 16px 0;
+}
+
+svg {
+  display: block;
+}
+
+/* Axis */
+.axis-top text,
+.axis-bottom text {
+  fill: #5a5a7a;
+  font-size: 11px;
+}
+
+.axis-top line,
+.axis-top path,
+.axis-bottom line,
+.axis-bottom path {
+  stroke: #2d2d4e;
+}
+
+.grid-line {
+  stroke: #2d2d4e;
+  stroke-dasharray: 2 4;
+}
+
+/* Bars */
+.bar {
+  rx: 3;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.bar:hover {
+  opacity: 0.85;
+}
+
+.bar-label {
+  font-size: 11px;
+  fill: #c8c8d8;
+  pointer-events: none;
+  dominant-baseline: middle;
+}
+
+/* Tooltip */
+#tooltip {
+  position: fixed;
+  background: #2d2d4e;
+  border: 1px solid #4d4d6e;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 100;
+  max-width: 220px;
+  line-height: 1.5;
+}
+
+#tooltip strong {
+  color: #c8b8a2;
+  display: block;
+  margin-bottom: 2px;
+}
+
+#tooltip .years {
+  color: #7a7a9a;
+  font-size: 0.78rem;
+}
+
+footer {
+  padding: 20px 32px;
+  font-size: 0.75rem;
+  color: #4a4a6a;
+  text-align: center;
+  border-top: 1px solid #2d2d4e;
+  margin-top: 8px;
+}

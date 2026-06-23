@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline Histórico</title>
+  <link rel="stylesheet" href="public/css/main.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Mapa de Contemporáneos</h1>
+    <p class="subtitle">Quiénes vivieron al mismo tiempo a lo largo de la historia</p>
+  </header>
+
+  <div id="controls">
+    <label for="category-filter">Categoría:</label>
+    <select id="category-filter"></select>
+  </div>
+
+  <div id="chart-container"></div>
+
+  <div id="tooltip"></div>
+
+  <footer>
+    Datos de ejemplo · Inspirado en <a href="https://github.com/ybogdanov/history-timeline" style="color:#5a5a7a">history-timeline</a>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="public/js/main.js"></script>
+</body>
+</html>
